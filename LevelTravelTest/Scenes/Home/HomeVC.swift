@@ -97,7 +97,6 @@ final class HomeVC: UIViewController {
     }
 }
 
-//MARK: - Table View Delegate
 
 extension HomeVC: HomeViewDelegate {
     
@@ -160,11 +159,6 @@ extension HomeVC: HomeViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UILabel()
     }
-    
-//    func didTapReloadButton() {
-//        contentView.loadingView.isHidden = false
-//        self.viewModel.fetchBrands()
-//    }
 }
 
 extension HomeVC: HomeViewCellDescription {

@@ -18,7 +18,6 @@ protocol HomeViewDelegate: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     func numberOfSections(in tableView: UITableView) -> Int
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-//    func didTapReloadButton()
 }
 
 final class HomeView: UIView {
@@ -52,7 +51,6 @@ final class HomeView: UIView {
         super.init(frame: .zero)
         addSubviews()
         makeConstraints()
-        setupElement()
         table.dataSource = delegate
         table.delegate = delegate
         self.delegate = delegate
@@ -61,10 +59,6 @@ final class HomeView: UIView {
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupElement() {
-//        headerView.reloadButton.addTarget(self, action: #selector(didTapReloadButton), for: .touchUpInside)
     }
     
     private func addSubviews() {
@@ -91,10 +85,6 @@ final class HomeView: UIView {
             $0.leading.trailing.equalTo(safeAreaLayoutGuide)
         }
     }
-    
-//    @objc func didTapReloadButton() {
-//        delegate?.didTapReloadButton()
-//    }
 }
 
 
